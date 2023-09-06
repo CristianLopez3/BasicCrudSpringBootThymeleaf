@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Home</title>
+    <!-- Link de css de bootstrap -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css" >
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../static/css/style.css">
+</head>
+<body id="index">
+
+    <div class="container">
+
+        <nav class="navbar bg-dark navbar-expand-lg border-body  p-3" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand mr-5" th:href="@{/estudiantes/todos}"  href="#">Ver estudiantes</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link mx-3" aria-current="page" href="#">Home</a>
+                  <a class="nav-link mx-3" href="#">Features</a>
+                  <a class="nav-link mx-3" href="#">Ingresa</a>
+                  <a class="nav-link mx-3" aria-disabled="true">registrate</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center text-uppercase">Welcome to basic CRUD <br> with Spring boot</h1>
+            </div>
+
+          </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- Link de javascript de bootstrap -->
+    <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+</body>
+</html>

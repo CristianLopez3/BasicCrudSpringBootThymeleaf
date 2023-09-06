@@ -1,0 +1,6 @@
+CREATE TABLE ficha(
+    id INT AUTO_INCREMENT NOT NULL,
+    numero VARCHAR(50) NOT NULL UNIQUE,
+    programa VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
+)

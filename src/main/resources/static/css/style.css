@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: #fff;
+}
+
+body{
+    background: rgb(91, 91, 91) !important;
+
+}
+
+
+#index{
+    color: var(--text-color);
+}
+
+
+#index h1{
+    font-size: 80px;
+    padding: 150px;
+}
+
+.card{
+    background-color: transparent;
+}
+
+input{
+    margin-bottom: 20px !important;
+}

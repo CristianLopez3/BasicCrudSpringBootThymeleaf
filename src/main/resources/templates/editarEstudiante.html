@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Estudiantes</title>
+
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css" >
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+<body id="estudiantes">
+
+<div class="container">
+
+    <nav class="navbar bg-dark navbar-expand-lg border-body  p-3" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mr-5" th:href="@{/}" href="#">HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link mx-3" aria-current="page" href="#">ddd</a>
+                    <a class="nav-link mx-3" href="#">ver proyectos</a>
+                    <a class="nav-link mx-3" href="#">ver resultados</a>
+                    <a class="nav-link mx-3" aria-disabled="true">registrar materias</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card p-3">
+
+        <form action="/estudiantes/nuevo" th:object="${estudiante}" th:action="@{/estudiantes/editar/{id}(id=${estudiante.id})}" method="post">
+            
+
+            <div class="row">
+
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <label for="nombre" class="form-label text-light">Nombre:</label>
+                    <input type="text" th:field="*{nombre}" class="form-control" id="nombre" placeholder="ingresa tu nombre..."> <br>
+            
+                    <label for="apellido" class="form-label text-light">Apellido:</label>
+                    <input type="text" th:field="*{apellido}" class="form-control" id="apellido" placeholder="ingresa tu apellido..."><br>
+            
+                    <label for="documento" class="form-label text-light">Documento:</label>
+                    <input type="text" th:field="*{documento}" class="form-control" id="documento" placeholder="ingresa tu documento...">
+            
+                    <label for="edad" class="form-label text-light">Edad:</label>
+                    <input type="number" th:field="*{edad}" class="form-control" id="edad" placeholder="ingresa tu edad..."> <br>
+            
+                    <label for="ficha" class="form-label text-light">Ficha:</label>
+                    <input type="number" th:field="*{ficha.id}" class="form-control" id="ficha" placeholder="ingresa tu ficha..."> <br>
+
+                    <button  class="btn btn-success mx-auto" type="submit">Registrar</button>
+                </div>
+
+                <div class="col-lg-2"></div>
+
+            </div>
+
+
+           
+
+        </form>
+
+
+
+    </div>
+    
+
+
+
+
+</div>
+
+
+<script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+</body>
+</html>
