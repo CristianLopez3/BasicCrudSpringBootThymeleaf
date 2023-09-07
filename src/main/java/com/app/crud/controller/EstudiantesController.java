@@ -1,6 +1,7 @@
 package com.app.crud.controller;
 
 import com.app.crud.entity.Estudiante;
+import com.app.crud.entity.Ficha;
 import com.app.crud.service.EstudianteCrudImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -62,6 +63,13 @@ public class EstudiantesController {
         servicio.delete(id);
         re.addFlashAttribute("msgExito", "Registro eliminado con exito");
         return "redirect:/estudiantes/todos";
+    }
+
+
+    @GetMapping("/estudiante/ficha/{numero}")
+    public String verFicha(@PathVariable String numero, Model model){
+        model.addAttribute("ficha", servicio.obtenerFichaPorNumero(numero));
+        return "fichaSeleccionada";
     }
 
 

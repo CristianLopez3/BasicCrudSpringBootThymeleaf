@@ -3,6 +3,7 @@ package com.app.crud.service;
 import com.app.crud.entity.Estudiante;
 import com.app.crud.entity.Ficha;
 import com.app.crud.repository.EstudianteRepository;
+import com.app.crud.repository.FichaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,10 @@ public class EstudianteCrudImp implements EstudianteCrud {
 
     @Autowired
     private EstudianteRepository repository;
+
+    @Autowired
+    private FichaRepository fichaRepository;
+
     @Override
     public List<Estudiante> obtenerTodo() {
         return repository.findAll();
@@ -21,6 +26,12 @@ public class EstudianteCrudImp implements EstudianteCrud {
     @Override
     public Estudiante obtenerEstudiantePorId(Long id){
         return repository.getReferenceById(id);
+    }
+
+    @Override
+    public Ficha obtenerFichaPorNumero(String numero) {
+        Ficha Ficha = fichaRepository.findByNumero(numero);
+        return Ficha;
     }
 
     @Override
@@ -41,7 +52,7 @@ public class EstudianteCrudImp implements EstudianteCrud {
 
     @Override
     public List<Estudiante> listarEstudiantesPorFicha(Ficha ficha) {
-        return repository.findByFicha(ficha);
+        return repository.findByFichaNumero(ficha);
     }
 
 

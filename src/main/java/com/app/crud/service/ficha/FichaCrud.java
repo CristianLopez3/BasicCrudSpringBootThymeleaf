@@ -10,6 +10,7 @@ public interface FichaCrud extends Crud<Ficha> {
 
     Ficha registrar(Ficha ficha);
 
+    Ficha obtenerFichaPorId(Long id);
     public Ficha listarUnaSolaFicha(Long id);
 
 }

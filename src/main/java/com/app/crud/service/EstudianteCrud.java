@@ -12,4 +12,5 @@ public interface EstudianteCrud extends Crud<Estudiante>{
     public Estudiante obtenerEstudiantePorId(Long id);
 
 
+    Ficha obtenerFichaPorNumero(String numero);
 }

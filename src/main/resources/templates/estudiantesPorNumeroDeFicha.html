@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Estudiantes</title>
+    <title>Estudiantes Por ficha</title>
 
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css" >
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../static/css/style.css">
@@ -58,11 +58,7 @@
                 <td th:text="${estudiante.getApellido()}"></td>
                 <td th:text="${estudiante.getDocumento()}"></td>
                 <td th:text="${estudiante.getEdad()}"></td>
-                <td>
-                    <a th:text="${estudiante.getFicha().id}" th:href="@{/estudiantes/estudiante/ficha/{numero}(numero=${estudiante.getFicha().id})}"></a>
-                </td>
-
-
+                <td th:text="${estudiante.getFicha().id}"></td>
                 <td>
                     <a class="btn btn-info" th:href="@{/estudiantes/editar/{id}(id=${estudiante.getId()})}">Editar</a>
                     <a class="btn btn-danger" th:href="@{/estudiantes/eliminar/{id}(id=${estudiante.getId()})}">Eliminar</a>

@@ -15,6 +15,11 @@ public class FichaCrudImp implements FichaCrud {
     private FichaRepository repository;
 
     @Override
+    public Ficha obtenerFichaPorId(Long id){
+        return repository.getReferenceById(id);
+    }
+
+    @Override
     public List<Ficha> obtenerTodo() {
         return repository.findAll();
     }
@@ -41,3 +46,4 @@ public class FichaCrudImp implements FichaCrud {
 
 
 }
+  

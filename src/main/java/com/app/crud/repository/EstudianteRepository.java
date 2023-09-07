@@ -9,6 +9,7 @@ import java.util.List;
 
 
 public interface EstudianteRepository extends JpaRepository<Estudiante, Long> {
-    List<Estudiante> findByFicha(Ficha ficha);
+    List<Estudiante> findByFichaNumero(Ficha ficha);
 
+    Ficha findByFichaNumero(String numero);
 }
